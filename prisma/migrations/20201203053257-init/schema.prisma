@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = "***"
+}
+
+model Vote {
+  id          Int     @id @default(autoincrement())
+	title       String
+	description String
+  users       UserVote[]
+  upperVote   Vote[]  @relation("RelationVote", references: [id])
+  lowerVote   Vote[]  @relation("RelationVote", references: [id])
+	val1        String?
+	val2        String?
+	val3        String?
+	val4        String?
+	val5        String?
+	val6        String?
+	val7        String?
+	val8        String?
+	val9        String?
+	val10       String?
+	val11       String?
+	val12       String?
+	val13       String?
+	val14       String?
+	val15       String?
+	val16       String?
+	val17       String?
+	val18       String?
+	val19       String?
+	val20       String?
+}
+model User {
+  id          Int       @id @default(autoincrement())
+  username    String? 
+  email       String?   @unique
+	votes       UserVote[]
+}
+model UserVote {
+	user          User        @relation(fields: [userId], references: [id])
+	userId        Int         //relation scalar field (used in the `@relation` attribute above)
+	vote          Vote        @relation(fields: [voteId], references: [id])
+	voteId        Int         //relation scalar field (used in the `@relation` attribute above)
+	voteSelect  String?
+  id          Int       @id @default(autoincrement())
+}

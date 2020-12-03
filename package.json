@@ -1,0 +1,42 @@
+{
+  "name": "prismaVue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./src/server.js",
+    "start": "nodemon --exec babel-node ./src/server.js",
+    "prisma": "npx prisma migrate save --name init --experimental && npx prisma migrate up --experimental && npx prisma generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thekanon/prismaVue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thekanon/prismaVue/issues"
+  },
+  "homepage": "https://github.com/thekanon/prismaVue#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.7",
+    "@prisma/cli": "^2.12.1"
+  },
+  "dependencies": {
+    "@nexus/schema": "0.19.2",
+    "@prisma/client": "^2.12.1",
+    "apollo-server": "2.19.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql-yoga": "^1.18.3",
+    "morgan": "^1.10.0",
+    "nexus-plugin-prisma": "0.25.0",
+    "semver": "7.3.4"
+  }
+}
