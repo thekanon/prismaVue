@@ -39,7 +39,7 @@ model User {
   id          Int       @id @default(autoincrement())
   username    String? 
   email       String?   @unique
-	votes       UserVote[]
+  votes       UserVote[]
 }
 model UserVote {
 	user          User        @relation(fields: [userId], references: [id])
