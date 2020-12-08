@@ -1,0 +1,6 @@
+type Mutation {
+    createUser(
+        username: String
+        email: String
+    ): Boolean!
+}
