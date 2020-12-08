@@ -1,31 +1,12 @@
 import { GraphQLServer } from 'graphql-yoga'
+//스키마 import
 import schema from "./schema"
 
 const { PrismaClient } = require("@prisma/client")
-const { makeExecutableSchema } = require('@graphql-tools/schema');
-
 const prisma = new PrismaClient()
-
-const typeDefs = `
-  type Query {
-    hello(name: String): String!
-  }
-`
-
-const resolvers = {
-  Query: {
-    hello: (_, { name }) => `Hello ${name || 'World'}`,
-  },
-}
+// ... or using `require()`
+// const { GraphQLServer } = require('graphql-yoga')
 
 
-const server = new GraphQLServer({ schema});
-
-async function users() {
-  const allUsers = await prisma.vote.findMany({
-
-  })
-  console.dir(allUsers)
-}
-// users();
+const server = new GraphQLServer({ schema });
 server.start(() => console.log('Server is running on localhost:4000'))

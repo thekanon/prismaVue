@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "@graphql-tools/schema": "^7.1.2",
-    "@nexus/schema": "0.19.2",
     "@prisma/client": "^2.12.1",
     "apollo-server": "2.19.0",
     "body-parser": "^1.19.0",
@@ -38,7 +37,6 @@
     "graphql-tools": "^7.0.2",
     "graphql-yoga": "^1.18.3",
     "morgan": "^1.10.0",
-    "nexus-plugin-prisma": "0.25.0",
     "semver": "7.3.4"
   }
 }

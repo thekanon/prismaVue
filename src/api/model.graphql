@@ -1,0 +1,42 @@
+type Vote {
+  id          : Int
+	title       : String
+	description : String
+  users       : [UserVote]
+  upperVote   : [Vote]
+  lowerVote   : [Vote]
+	val1        : String
+	val2        : String
+	val3        : String
+	val4        : String
+	val5        : String
+	val6        : String
+	val7        : String
+	val8        : String
+	val9        : String
+	val10       : String
+	val11       : String
+	val12       : String
+	val13       : String
+	val14       : String
+	val15       : String
+	val16       : String
+	val17       : String
+	val18       : String
+	val19       : String
+	val20       : String
+}
+type User {
+  id         : Int
+  username   : String 
+  email      : String   
+  votes      : [UserVote]
+}
+type UserVote {
+	user       :   User 
+	userId     :   Int  
+	vote       :   Vote 
+	voteId     :   Int  
+	voteSelect : String
+  id         : Int
+}
