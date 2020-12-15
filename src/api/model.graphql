@@ -1,10 +1,10 @@
 type Vote {
-  id          : Int
+    id          : Int
 	title       : String
 	description : String
-  users       : [UserVote]
-  upperVote   : [Vote]
-  lowerVote   : [Vote]
+    users       : [UserVote]
+    upperVote   : [Vote]
+    lowerVote   : [Vote]
 	val1        : String
 	val2        : String
 	val3        : String
