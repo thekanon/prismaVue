@@ -1,0 +1,7 @@
+type Query {
+    getVote(
+        id: Int
+        upperVote:Int
+        lowerVote:Int
+    ): [Vote]
+}

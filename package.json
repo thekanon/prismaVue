@@ -36,6 +36,8 @@
     "graphql-tools": "^7.0.2",
     "graphql-yoga": "^1.18.3",
     "morgan": "^1.10.0",
-    "semver": "7.3.4"
+    "nodemon": "^2.0.4",
+    "semver": "7.3.4",
+    "yarn": "^1.22.10"
   }
 }
