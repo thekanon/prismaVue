@@ -7,7 +7,7 @@ export default {
             console.log(id,upperVote,lowerVote)
             const votes =  await prisma.vote.findMany({
                 where:{
-                    id:id,
+                    id:id ? id : undefined,
                     upperVote: upperVote? {
                         some:{
                             id:upperVote
